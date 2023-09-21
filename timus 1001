@@ -1,0 +1,18 @@
+//AUTHOR:: ASHFICK
+//DATE:: 17 sep 2023
+#include<bits/stdc++.h>
+using namespace std;
+void reverse(){
+    vector< double> a;
+     long long int n;
+     while(cin>>n){
+       a.push_back(sqrt(n));  
+     }
+   int b= a.size();
+    while(b--){
+        printf("%.4lf \n", a[b]);
+    }
+}
+int main(){
+    reverse();
+}
