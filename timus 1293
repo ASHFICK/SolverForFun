@@ -1,0 +1,10 @@
+#include<bits/stdc++.h>
+using namespace std;
+void good(){
+int n,a,b;
+cin>> n>> a>> b;
+cout<< 2*n*a*b;
+}
+int main(){
+good();
+}
