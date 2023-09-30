@@ -1,0 +1,39 @@
+//AUTHOR:: ASHFICK
+//sieve of eratothenes
+#include<bits/stdc++.h>
+
+using namespace std;
+vector<int>a;
+vector<bool>s;
+int n=163847;
+void round() {
+s.push_back(0);
+s.push_back(0);
+for(int i=2;i<=n;i++) (i%2==0)&&(i>2)? s.push_back(0): ((i%3==0) && (i>3))? s.push_back(0): s.push_back(1);
+for(int i=5; i*i<=n;i+=2){
+    if (s[i]==1){
+        for( int j=i*i;j<=n;j+=2){
+            if(s[j]==0){continue;}
+            else if(j%i==0){
+                s[j]=0;
+            }
+        }
+    }
+}
+a.push_back(2);
+a.push_back(3);
+for(int i=5;i<=n;i+=2){
+    if((s[i]==1)){a.push_back(i);}
+}
+}
+int main(){
+round();
+int t;
+cin>> t;
+while(t--){
+    int f;
+    cin>> f;
+    cout<< a[f-1] <<'\n';
+}
+}
+
