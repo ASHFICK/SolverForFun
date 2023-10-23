@@ -1,0 +1,75 @@
+#include<cstdio>
+#include<cmath>
+using namespace std;
+typedef long long ll;
+#define MAXP 2000000
+#define EPS 0.00000001
+ll n;
+bool isNotPrime[MAXP+10];
+int num_prime,prime[MAXP+10];
+void shai()
+{
+    for(long i = 2 ; i <  MAXP ; i ++)   
+    {   
+        if(! isNotPrime[i])   
+            prime[num_prime ++]=i;   
+        for(long j = 0 ; j < num_prime && i * prime[j] <  MAXP ; j ++)   
+        {   
+            isNotPrime[i * prime[j]] = 1;   
+            if( !(i % prime[j]))   
+                break;   
+        }   
+    }   
+}
+bool is_prime(ll x)
+{
+    if(x==1ll)
+      return 0;
+    for(ll i=2;i*i<=x;++i)
+      if(x%i==0)
+        return 0;
+    return 1;
+}
+int m=20;
+int main()
+{
+    scanf("%I64d",&n);
+    shai();
+    for(int i=0;i<num_prime;++i)
+      {
+        if((double)m*log((double)prime[i])-log((double)n)>EPS)
+          {
+            puts("No");
+            return 0;
+          }
+        while(n%(ll)prime[i]==0)
+          {
+            n/=(ll)prime[i];
+            --m;
+          }
+        if(m==0 && n==1)
+          {
+            puts("Yes");
+            return 0;
+          }
+        if(m<0 || (m==0 && n>1))
+          {
+            puts("No");
+            return 0;
+          }
+        if(n>1 && m==1)
+          {
+            if(is_prime(n))
+              {
+                puts("Yes");
+                return 0;
+              }
+            else
+              {
+                puts("No");
+                return 0;
+              }
+          }
+      }
+    return 0;
+}
