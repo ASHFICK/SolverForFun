@@ -14,3 +14,9 @@ else{
      fact(a/16);
 }
 }
+int main(){
+long long b;
+cin>>b;
+fact(b);
+for(int i=as.size();i>0;i--){ cout<< as[i-1];}
+}
