@@ -1,0 +1,16 @@
+//AUTHOR:: ASHFICK
+
+#include<bits/stdc++.h>
+
+int cnt =0;
+using namespace std;
+vector<char>as;
+int fact(int a){
+if(a==0){
+    return 0;
+}
+else{
+        as.push_back((a%16<=9)?char(48+(a%16)):char(55+(a%16)));
+     fact(a/16);
+}
+}
