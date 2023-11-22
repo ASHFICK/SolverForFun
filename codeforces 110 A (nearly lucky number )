@@ -1,0 +1,49 @@
+//AUTHOR:: ASHFICK DATE 20/8/23
+#include <bits/stdc++.h>
+
+using namespace std;
+int check(long long n){
+    long long p,r;
+    int t= floor(log10(n)+1);
+   int x=0;
+   int a=t;
+
+   while(a--){
+      p= pow(10,a);
+   r=n%p;
+   n=(n-r)/p;
+   if((n==4)||(n==7)){
+    x++;
+   }
+   n=r;
+   }
+   return x;
+}
+int check(int m){
+  int p,r;
+    int t= floor(log10(m)+1);
+   int x=0;
+   int a=t;
+
+   while(a--){
+      p= pow(10,a);
+   r=m%p;
+   m=(m-r)/p;
+   if((m==4)||(m==7)){
+    x++;
+   }
+   else{ break;}
+   m=r;
+   }
+   return 1*(t==x);
+}
+
+int main()
+{
+   long long s;
+   cin>> s;
+   int b =check(s);
+   int c= check(b);
+   string l=(c==1)?"YES":"NO";
+   cout<< l;
+}
