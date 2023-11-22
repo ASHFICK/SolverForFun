@@ -1,0 +1,31 @@
+//AUTHOR:: ASHFICK
+// 14 SEP 2023
+#include<bits/stdc++.h>
+using namespace std;
+void sWap(int *a, int *b){
+int temp;
+temp = *a;
+*a = *b;
+*b = temp;
+}
+void round(){
+int t;
+bool f=false;
+cin>> t;
+vector<int> a;
+while(t--){
+int ae;
+cin>>ae;
+if (ae==0){f=1;}
+ae*=((ae>0)-(ae<0));
+a.push_back(ae);
+}
+if(f!=1){
+sort(a.begin(),a.end());
+cout<< a[0];
+}
+else{ cout<< 0;}
+}
+int main(){
+round();
+}
