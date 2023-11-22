@@ -1,0 +1,19 @@
+#include<bits/stdtr1c++.h>
+using namespace std;
+
+int main(){
+int i,n,t,x,y,a;
+cin>>t;
+for(i=1;i<=t;i++){
+    cin>> x>> y>> n ;
+   int b= n/x;
+    int c= n-b*x;
+    if(c>=y){
+        a=(n/x)*x+y;
+    }
+    else{
+        a= (n/x-1)*x+y;
+    }
+    cout<< a<< "\n";
+        }
+}
