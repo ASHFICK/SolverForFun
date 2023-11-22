@@ -1,0 +1,23 @@
+#include <bits/stdtr1c++.h>
+
+using namespace std;
+
+void check()
+{
+   int n=0,l=0,i;
+   string s;
+   cin>>s;
+  string x="codeforces";
+  for(i=0;s[i]!='\0';i++){
+    n=((s[i]!=x[i]))?n+1:n;
+  }
+  cout<< n<<'\n';
+}
+int main(){
+    int a;
+    cin>> a;
+    while(a--){
+check();
+}
+}
+
