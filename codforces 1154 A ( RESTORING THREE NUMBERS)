@@ -1,0 +1,19 @@
+#include<bits/stdtr1c++.h>
+using namespace std;
+int main(){
+int x[4],i,j;
+for(i=0;i<4;i++){
+    cin>> x[i];
+}
+int m= x[0];
+for(i=0; i<4;i++){
+    for(j=i;j<=3;j++){
+       if(x[i]<x[j]){
+        int temp=x[i];
+        x[i]=x[j];
+        x[j]=temp;
+       }
+    }
+}
+cout<< x[0]-x[1]<< " "<<x[0]-x[2]<< " "<< x[0]-x[3];
+}
