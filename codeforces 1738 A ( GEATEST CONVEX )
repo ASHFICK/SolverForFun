@@ -1,0 +1,13 @@
+//author: ashfick<3
+//24-01-23
+#include<bits/stdtr1c++.h>
+using namespace std;
+int main(){
+int t,k;
+cin>> t;
+while(t--){
+cin>>k;
+cout<< k-1<< "\n";
+}
+}
+
