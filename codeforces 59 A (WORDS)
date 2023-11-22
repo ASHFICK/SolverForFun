@@ -1,0 +1,31 @@
+/* author: Ashfick
+date: 08-03-23 */
+
+#include <bits/stdc++.h>
+
+using namespace std;
+string s;
+void capital(){
+for( int i=0;s[i]!='\0';i++){
+   s[i]=( s[i]<96)? s[i]:s[i]-32;
+}
+}
+void low(){
+    for( int i=0;s[i]!='\0';i++){
+   s[i]=( s[i] >96)? s[i]:s[i]+32;
+
+}
+}
+void dodo(){
+cin>> s;
+int l=0,c=0;
+for( int i=0;s[i]!='\0';i++){
+   ( s[i]<96)? c++:l++;
+}
+ (c==l)?low():(c>l)?capital():low();
+ cout<< s;
+}
+int main(){
+dodo();
+}
+
