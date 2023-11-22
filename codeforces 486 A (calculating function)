@@ -1,0 +1,15 @@
+#include<bits/stdtr1c++.h>
+using namespace std;
+int main(){
+long long n,d,i,a;
+cin>> n;
+i=n%2;
+a=(n+1)/2;
+if(i==0){
+   d=a;
+   }
+   if(i!=0){
+    d=-a;
+   }
+   cout<<d;
+}
