@@ -1,0 +1,8 @@
+#include<bits/stdtr1c++.h>
+using namespace std;
+int main(){
+    int n,m,t;
+    cin>>n>>m;
+cout<<n*m/2;
+
+}
