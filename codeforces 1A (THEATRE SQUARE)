@@ -1,0 +1,10 @@
+#include<bits/stdtr1c++.h>
+using namespace std;
+int main(){
+    long double  m,n,a;
+    cin>> n >> m>>a;
+long long x= ceil((n/a));
+long long y= ceil((m/a));
+long long t=x*y;
+cout<<  t;
+}
