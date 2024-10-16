@@ -1,0 +1,41 @@
+//Author:: Ashfick
+//date:: 16 oct 2024
+
+
+#include<stdio.h>
+
+#define e 0.5
+#define rm 0.7 // distribution factor for men
+#define rf 0.6 //distribution factor for women
+#define p 0.8 // density of alcohol
+
+double calcA(double a){
+
+return(a*e*p);
+
+}
+
+
+void cal(double a,double b){
+double x,y;
+x=a/(b*rm);
+y=a/(b*rf);
+printf("The blood alcohol concentration for a woman is: %.1lf per mille \n",y/10);
+printf("The blood alcohol concentration for a man is: %0.1lf per mille \n",x/10);
+}
+
+
+int main(){
+
+double v,m;
+
+printf("What is your weight (in kg)? How much beer have you consumed (in ml)?\n");
+
+scanf("%lf",&v);
+scanf("%lf",&m);
+double g=calcA(m);
+cal(g,v);
+
+
+return 0;
+}
